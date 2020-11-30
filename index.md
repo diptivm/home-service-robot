@@ -1,6 +1,9 @@
 ﻿# home-service-robot
 ## Summary
 Simulated application using ros and gazebo for a mobile turtlebot autonomously navigating an indoor enviornment and performing a pick-place task. The object to be picked is a ball represented as a marker on RViz. Requires a 2D occupancy-grid map (in the form of a pgm image) of the environment. 
+## Video 
+[![Gazebo simulation](http://img.youtube.com/vi/VTJuzgkDmx0/0.jpg)](https://www.youtube.com/embed/VTJuzgkDmx0
+ "Home Service Robot Video")
 ## Implementation
 1. Gazebo world models an indoor enviornment and spawns a differential drive turtlebot equipped with a LIDAR and RGB camera. 
 2. The map in this project was created using RTAB-map, using a Graph-SLAM technique on 2D-LIDAR and RGBD camera data, on a different robot. It can also be created using grid-based SLAM techniques such as FAST SLAM, and using the same turtlebot. 
