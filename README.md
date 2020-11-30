@@ -5,8 +5,8 @@ Simulated application using ros and gazebo for a mobile turtlebot autonomously n
 1. Gazebo world models an indoor enviornment and spawns a differential drive turtlebot equipped with a LIDAR and RGB camera. 
 2. The map in this project was created using RTAB-map, using a Graph-SLAM technique on 2D-LIDAR and RGBD camera data, on a different robot. It can also be created using grid-based SLAM techniques such as FAST SLAM, and using the same turtlebot. 
 3. The ros amcl package (with special configurations for the turtlebot) is used for the robot localization, path planning using local and global cost planners, and for sending locomotion commands to move the robot base.
-4. A separate node (pcik_objects) commands the robot to navigate to the object's pick-up location, wait a while to pick the object, and then navigate to transport it to the drop-off.
-5. Finally, to simulate the picking and dropping of the object (a white ball), a representative marker is added to the RViz visualization, and made to disappear and appear at the drop off as the robot completes its pick and place mission. 
+4. A separate node (pick_objects) commands the robot to navigate to the object's pick-up location, wait a while to pick the object, and then navigate to transport it to the drop-off.
+5. Finally, to simulate the picking and dropping of the object (a white ball), a representative marker is added to the RViz visualization by the add_markers node, and made to disappear and appear at the drop off as the robot completes its pick and place mission. 
 ## Usage
 1. Run <code> catkin_make </code> in the project directory to make this your catkin workspace.
 2. Launch the shell script file 
