@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+﻿# home-service-robot
+## Summary
+Simulated application using ros and gazebo for a mobile turtlebot autonomously navigating an indoor enviornment and performing a pick-place task. The object to be picked is a ball represented as a marker on RViz. Requires a 2D occupancy-grid map (in the form of a pgm image) of the environment. 
+## Implementation
+1. Gazebo world models an indoor enviornment and spawns a differential drive turtlebot equipped with a LIDAR and RGB camera. 
+2. The map in this project was created using RTAB-map, using a Graph-SLAM technique on 2D-LIDAR and RGBD camera data, on a different robot. It can also be created using grid-based SLAM techniques such as FAST SLAM, and using the same turtlebot. 
+3. The ros amcl package (with special configurations for the turtlebot) is used for the robot localization, path planning using local and global cost planners, and for sending locomotion commands to move the robot base.
+4. A separate node (pick_objects) commands the robot to navigate to the object's pick-up location, wait a while to pick the object, and then navigate to transport it to the drop-off.
+5. Finally, to simulate the picking and dropping of the object (a white ball), a representative marker is added to the RViz visualization by the add_markers node, and made to disappear and appear at the drop off as the robot completes its pick and place mission. 
+## Usage
+1. Run <code> catkin_make </code> in the project directory to make this your catkin workspace.
+2. Launch the shell script file 
+<code> ./home_service.sh </code>. 
+3. Note, if Gazebo fails to launch, one may be need to install rospkg as a missing dependency.<code> pip install rospkg </code>. 
+4. Observe the simulated robot's movement in gazebo and visualize the pick and place task progress in RViz.
+## Improvements
+1. Accepting user input for a variable drop off location within the house.
 
-You can use the [editor on GitHub](https://github.com/diptivm/home-service-robot/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/diptivm/home-service-robot/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
