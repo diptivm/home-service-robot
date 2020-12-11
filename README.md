@@ -1,6 +1,6 @@
 ﻿# home-service-robot
 ## Summary
-Simulated application using ros and gazebo for a mobile turtlebot autonomously navigating an indoor enviornment and performing a pick-place task. The object to be picked is a ball represented as a marker on RViz. Requires a 2D occupancy-grid map (in the form of a pgm image) of the environment. 
+Simulated application using ros and gazebo for a mobile turtlebot autonomously navigating an indoor enviornment and performing a pick-place task. The object to be picked is a ball represented as a marker on RViz. Employs a 2D occupancy-grid map (in the form of a pgm image) of the environment. 
 ## Implementation
 1. Gazebo world models an indoor enviornment and spawns a differential drive turtlebot equipped with a LIDAR and RGB camera. 
 2. The map in the main/ branch of this project was created using PGM Map creator (https://github.com/hyfan1116/pgm_map_creator), which creates a pgm map of an environment based on its gazebo world file .
