@@ -1,13 +1,13 @@
 ﻿# home-service-robot
 ## Summary
 Simulated application using ros and gazebo for a mobile turtlebot autonomously navigating an indoor enviornment and performing a pick-place task. The object to be picked is a ball represented as a marker on RViz. Employs a 2D occupancy-grid map (in the form of a pgm image) of the environment. 
-## Video - using PGM_Map_Creator maps from the /main branch
+## Video - using PGM_Map_Creator map from the /main branch
 [![Gazebo simulation](http://img.youtube.com/vi/VTJuzgkDmx0/0.jpg)](https://www.youtube.com/embed/VTJuzgkDmx0
  "Home Service Robot Video - Gazebo")
  [![RViz visualization](http://img.youtube.com/vi/ZwqgDXNuH0M/0.jpg)](https://www.youtube.com/embed/ZwqgDXNuH0M
   "Home Service Robot Video - Rviz")
  
-## Video - using gmapping map
+## Video - using gmapping map from the /gmap branch
 [![Gazebo simulation - GMAP](http://img.youtube.com/vi/Y0kl1pGt5ic/0.jpg)]( https://youtu.be/Y0kl1pGt5ic
  "Home Service Robot Video - Gazebo")
  [![RViz visualization - GMAP](http://img.youtube.com/vi/NpJmN15OBjE/0.jpg)](https://www.youtube.com/embed/NpJmN15OBjE
