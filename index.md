@@ -5,7 +5,10 @@ Simulated application using ros and gazebo for a mobile turtlebot autonomously n
 [![Gazebo simulation](http://img.youtube.com/vi/VTJuzgkDmx0/0.jpg)](https://www.youtube.com/embed/VTJuzgkDmx0
  "Home Service Robot Video - Gazebo")
  [![RViz visualization](http://img.youtube.com/vi/ZwqgDXNuH0M/0.jpg)](https://www.youtube.com/embed/ZwqgDXNuH0M
+ ## Video - using Gmap
+[![Gazebo simulation](http://img.youtube.com/vi/Y0kl1pGt5ic/0.jpg)]( https://youtu.be/Y0kl1pGt5ic
  "Home Service Robot Video - Rviz")
+
 ## Implementation
 1. Gazebo world models an indoor enviornment and spawns a differential drive turtlebot equipped with a LIDAR and RGB camera. 
 2. The map in the main/ branch of this project was created using PGM Map creator (https://github.com/hyfan1116/pgm_map_creator), which creates a pgm map of an environment based on its gazebo world file .
