@@ -5,6 +5,10 @@
 #include "math.h"
 
 int robot_state = 0; //0: start 1: reached pick-up 2: reached drop-off
+double x_p = 4.5;
+double y_p = -0.5;
+double x_d = 4.0;
+double y_d = 5.0;
 
 ros::Publisher marker_pub;
 visualization_msgs::Marker marker;
@@ -12,10 +16,7 @@ visualization_msgs::Marker marker;
 void amclEventCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& msg)
 {
   //ROS_INFO("I heard %f", msg->pose.pose.position.y);
-  double x_p = 5.0;
-  double y_p = 7.0;
-  double x_d = 4.0;
-  double y_d = 5.0;
+  
   double x = msg->pose.pose.position.x;
   double y = msg->pose.pose.position.y;
   double tolerance = 0.25;
@@ -32,8 +33,8 @@ void amclEventCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr&
     robot_state = 2;
     ROS_INFO("Robot reached drop-off");  
     ROS_INFO("Transporting marker");
-    marker.pose.position.x = 4.0;
-    marker.pose.position.y = 5.0;
+    marker.pose.position.x = x_d;
+    marker.pose.position.y = y_d;
     //ROS_INFO("%f", fabs(x - x_d));
     //ROS_INFO("%f", fabs(y - y_d));
     marker.color.a = 1.0;
@@ -99,8 +100,8 @@ int main( int argc, char** argv )
     }
    
 
-    marker.pose.position.x = 5.0;
-    marker.pose.position.y = 7.0;  
+    marker.pose.position.x = x_p;
+    marker.pose.position.y = y_p;  
     marker.color.a = 1.0; 
     marker_pub.publish(marker);
     ROS_INFO("Placing marker");

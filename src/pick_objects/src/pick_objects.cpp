@@ -26,9 +26,9 @@ int main(int argc, char** argv){
   goal2.target_pose.header.frame_id = "map";
 
   // Define a position and orientation for the robot to reach
-  goal.target_pose.pose.position.x = 5.0;
-  goal.target_pose.pose.position.y = 7.0;
-  goal.target_pose.pose.orientation.w = 1.57;
+  goal.target_pose.pose.position.x = 4.5;
+  goal.target_pose.pose.position.y = -0.5;
+  goal.target_pose.pose.orientation.w = -1.57;
 
   goal2.target_pose.pose.position.x = 4.0;
   goal2.target_pose.pose.position.y = 5.0;
