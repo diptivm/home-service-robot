@@ -6,7 +6,8 @@ Simulated application using ros and gazebo for a mobile turtlebot autonomously n
  "Home Service Robot Video - Gazebo")
  [![RViz visualization](http://img.youtube.com/vi/ZwqgDXNuH0M/0.jpg)](https://www.youtube.com/embed/ZwqgDXNuH0M
   "Home Service Robot Video - Rviz")
- ## Video - using gmapping map
+ 
+## Video - using gmapping map
 [![Gazebo simulation - GMAP](http://img.youtube.com/vi/Y0kl1pGt5ic/0.jpg)]( https://youtu.be/Y0kl1pGt5ic
  "Home Service Robot Video - Gazebo")
   [![RViz visualization - GMAP](http://img.youtube.com/vi/NpJmN15OBjE/0.jpg)](https://www.youtube.com/embed/NpJmN15OBjE
